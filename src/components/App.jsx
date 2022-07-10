@@ -22,12 +22,11 @@ export class App extends Component {
     return total ? Math.round(good / total * 100) : 0
   }
 
-  onBtnClick = (e) => {
-    const buttonName = e.target.textContent.toLowerCase();
+  onBtnClick = (option) => {
     this.setState((prevState) => {
       return {
         ...prevState,
-        [buttonName]: prevState[buttonName] + 1,
+        [option]: prevState[option] + 1,
       }
     })
   }
